@@ -24,7 +24,7 @@ function TabOptions({activeTab, setActiveTab}) {
         backdrop: "#EDf4FF",
         inactive_img: "https://b.zmtcdn.com/data/o2_assets/01040767e4943c398e38e3592bb1ba8a1616150142.png",
       },
-  ]
+  ];
   return (
     <div className="tab-options">
         <div className="max-width options-wrapper">

@@ -8,4 +8,6 @@
     --inactive-text: #696969;
     --inactive-color: #f8f8f8;
     --filter-text: #9c9c9c;
+    --heading-text: #1c1c1c;
+    --collection-shadow: rgb(0 0 0 / 8%) 0 3px 12px;
 }
