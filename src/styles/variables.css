@@ -1,0 +1,8 @@
+#root {
+    --primary-box-shadow: rgb(28 28 28 / 8%) 0 2px 8px;
+    --border-white: rgb(232, 232, 232);
+    --primary-bg: rgb(255, 255, 255);
+    --light-gray: #828282;
+    --light-pink: #ff7e8b;
+    --gray: rgb(207, 207, 207);
+}
