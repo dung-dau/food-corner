@@ -1,4 +1,6 @@
 import React from 'react';
+import { restaurants } from '../../data/Restaurants';
+import ExploreSection from '../common/exploreSection/ExploreSection';
 import Filters from '../common/filters/Filters';
 import './delivery.css';
 import DeliveryCollections from './deliveryCollections/DeliveryCollections';
@@ -33,6 +35,7 @@ function Delivery() {
         title: "Great Offers",
       },
   ]
+  const restaurantList = restaurants;
   return (
     <div>
         <div className='max-width'>
@@ -40,6 +43,7 @@ function Delivery() {
         </div>
         <DeliveryCollections />
         <TopBrands />
+        <ExploreSection list={restaurantList} />
     </div>
   )
 }
