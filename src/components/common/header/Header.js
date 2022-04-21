@@ -4,7 +4,7 @@ import './Header.css';
 function Header() {
   return (
     <div className='max-width header'>
-        <img src='https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png?fit=around|198:42&crop=198:42;*,*'
+        <img src='https://i.ibb.co/NT8vDhs/restaurant-logo.png'
              alt='logo'
              className='header-logo'
         />
@@ -13,7 +13,7 @@ function Header() {
                 <div className="location-wrapper">
                     <div className="location-icon-name">
                         <i className="fi fi-rr-marker absolute-center location-icon"></i>
-                        <div>Bangladore</div>
+                        <div>Your Location</div>
                     </div>
                     <i className="fi fi-rr-caret-down absolute-center"></i>
                 </div>

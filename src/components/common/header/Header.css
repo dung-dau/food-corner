@@ -6,7 +6,7 @@
 }
 
 .header-logo {
-    height: 27px;
+    height: 75px;
     max-width: 140px;
     margin-right: 24px;
 }
@@ -43,7 +43,7 @@
 }
 
 .location-icon {
-    color: var(--light-pink);
+    color: var(--light-blue);
     font-size: 20px;
     margin-right: 8px;
 }

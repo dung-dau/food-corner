@@ -22,18 +22,17 @@
     height: 60px;
     width: 60px;
     border-radius: 50%;
-    background-color: var(--inactive-color);
 }
 
 .tab-image {
-    height: 30px;
-    width: 30px;
+    height: 45px;
+    width: 45px;
 }
 
 .active-tab {
-    border-bottom: 2px solid var(--light-pink)
+    border-bottom: 2px solid var(--light-blue)
 }
 
 .active-tab .tab-name {
-    color: var(--light-pink);
+    color: var(--light-blue);
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { restaurants } from '../../data/Restaurants';
 import ExploreSection from '../common/exploreSection/ExploreSection';
 import Filters from '../common/filters/Filters';
@@ -7,6 +7,7 @@ import DeliveryCollections from './deliveryCollections/DeliveryCollections';
 import TopBrands from './topBrands/TopBrands';
 
 function Delivery() {
+  let [activeFilter, setActiveFilter] = useState("");
   const deliveryFilters = [
       {
           id: 1,
@@ -39,11 +40,14 @@ function Delivery() {
   return (
     <div>
         <div className='max-width'>
-            <Filters filterList={deliveryFilters} />
+            <Filters filterList={deliveryFilters} 
+                     activeFilter={activeFilter} 
+                     setActiveFilter={setActiveFilter}
+            />
         </div>
         <DeliveryCollections />
         <TopBrands />
-        <ExploreSection list={restaurantList} />
+        <ExploreSection list={restaurantList} collectionName='Delivery Restaurants'/>
     </div>
   )
 }

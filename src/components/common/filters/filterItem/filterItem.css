@@ -12,3 +12,8 @@
 .filter-name {
     margin-left: 5px;
 }
+
+.active-filter {
+    background-color: var(--filter-text);
+    color: var(--primary-bg);
+}

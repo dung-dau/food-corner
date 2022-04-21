@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState } from 'react'
-import Footer from '../../components/common/footer/Footer'
 import Header from '../../components/common/header/Header'
 import TabOptions from '../../components/common/tabOptions/TabOptions'
 import Delivery from '../../components/delivery/Delivery'
@@ -15,7 +14,6 @@ function HomePage() {
       <TabOptions activeTab={activeTab} setActiveTab={setActiveTab}/>
       {/* unique screen */}
       {getCorrectScreen(activeTab)}
-      <Footer/>
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { diningOut } from '../../data/diningOut';
 import Collection from '../common/collection/Collection';
 import ExploreSection from '../common/exploreSection/ExploreSection';
@@ -106,12 +106,16 @@ function DiningOut() {
       places: "22 Places",
     },
   ];
+  const [activeDiningFilter, setActiveDiningFilter] = useState("");
   const diningList = diningOut;
   return (
     <div>
       <Collection list={collectionList}/>
       <div className="max-width">
-        <Filters filterList={diningFilters} />
+        <Filters filterList={diningFilters} 
+                 activeFilter={activeDiningFilter} 
+                 setActiveFilter={setActiveDiningFilter} 
+        />
       </div>
       <ExploreSection list={diningList} 
                       collectionName="Dine-Out Restaurants in Your Local Area" 

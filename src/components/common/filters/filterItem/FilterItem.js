@@ -1,9 +1,11 @@
 import React from 'react';
 import './filterItem.css';
 
-function FilterItem({filter}) {
+function FilterItem({filter, activeFilter, setActiveFilter}) {
   return (
-    <div className='filter-item'>
+    <div className={`filter-item cur-po ${activeFilter === filter.title && "active-filter"}`}
+         onClick={() => setActiveFilter(filter.title)}
+    >
         {filter.icon && filter.icon}
         <div className='filter-name'>{filter.title}</div>
     </div>

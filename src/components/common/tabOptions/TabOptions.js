@@ -6,23 +6,20 @@ function TabOptions({activeTab, setActiveTab}) {
       {
           id: 1,
           name: "Delivery",
-          activeImage: "https://b.zmtcdn.com/data/o2_assets/c0bb85d3a6347b2ec070a8db694588261616149578.png",
+          activeImage: "https://thumbs.dreamstime.com/b/delivery-man-motorbike-logo-icon-scooter-bike-vector-express-free-209736021.jpg",
           backDrop: "FCEEC0",
-          inactiveImage: "https://b.zmtcdn.com/data/o2_assets/246bbd71fbba420d5996452be3024d351616150055.png",
       },
       {
         id: 2,
         name: "Dining Out",
-        active_img: "https://b.zmtcdn.com/data/o2_assets/30fa0a844f3ba82073e5f78c65c18b371616149662.png",
+        activeImage: "https://static.vecteezy.com/system/resources/thumbnails/002/703/311/small/restaurant-food-and-cuisine-plate-with-cutlery-fork-and-spoon-icon-cartoons-illustration-graphic-design-free-vector.jpg",
         backdrop: "#E5F3F3",
-        inactive_img: "https://b.zmtcdn.com/data/o2_assets/78d25215ff4c1299578ed36eefd5f39d1616149985.png",
       },
       {
         id: 3,
         name: "Nightlife",
-        active_img: "https://b.zmtcdn.com/data/o2_assets/855687dc64a5e06d737dae45b7f6a13b1616149818.png",
+        activeImage: "https://i.ibb.co/4F92t0v/wine-glass.jpg",
         backdrop: "#EDf4FF",
-        inactive_img: "https://b.zmtcdn.com/data/o2_assets/01040767e4943c398e38e3592bb1ba8a1616150142.png",
       },
   ];
   return (
@@ -36,7 +33,7 @@ function TabOptions({activeTab, setActiveTab}) {
                         <div className='tab-image-container absolute-center'
                              style={{backgroundColor: `${activeTab === tab.name?tab.backDrop : ""}`}}
                         >
-                            <img className='tab-image' src={activeTab === tab.name ? tab.activeImage : tab.inactiveImage} alt={tab.name} />
+                            <img className='tab-image' src={tab.activeImage} alt={tab.name} />
                         </div>
                         <div className="tab-name">{tab.name}</div>
                     </div>
