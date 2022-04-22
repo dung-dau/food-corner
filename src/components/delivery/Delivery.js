@@ -42,7 +42,7 @@ function Delivery() {
         </div>
         <DeliveryCollections />
         <TopBrands />
-        <ExploreSection list={restaurantList} collectionName='Delivery Restaurants'/>
+        <ExploreSection list={restaurantList} collectionName='Delivery Restaurants' />
     </div>
   )
 }
