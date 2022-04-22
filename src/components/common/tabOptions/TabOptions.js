@@ -1,7 +1,10 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { setTitle } from '../../../redux/filter';
 import './tabOptions.css';
 
 function TabOptions({activeTab, setActiveTab}) {
+  const dispatch = useDispatch();
   const tabs = [
       {
           id: 1,
@@ -27,7 +30,10 @@ function TabOptions({activeTab, setActiveTab}) {
         <div className="max-width options-wrapper">
             {tabs.map((tab) => {
                 return (
-                    <div onClick={() =>setActiveTab(tab.name)}
+                    <div onClick={() => {
+                             setActiveTab(tab.name)
+                             dispatch(setTitle(""))
+                            }}
                          className={`tab-item absolute-center cur-po ${activeTab === tab.name && "active-tab"}`}
                          key={tab.id}
                     >
