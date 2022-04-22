@@ -9,8 +9,6 @@ function ExploreSection({list, collectionName}) {
     const title = useSelector(selectTitle);
     const activeFilterExists = useSelector(selectActiveFilterExists);
     let filteredList = list;
-    console.log(title);
-
 
     useEffect(() => {
 
@@ -55,6 +53,12 @@ function ExploreSection({list, collectionName}) {
         filteredList = filteredList.sort((a, b) => (
             a.info.cfo.text.localeCompare(b.info.cfo.text)
         ));
+    }
+
+    if(title === "Pro Offers") {
+        filteredList = filteredList.filter((restaurant) => (
+            restaurant.checkBulkOffers === true 
+        ))
     }
   
   return (

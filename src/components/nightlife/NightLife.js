@@ -9,26 +9,12 @@ function NightLife() {
   const nightFilters = [
     {
       id: 1,
-      icon: <i className="fi fi-rr-settings-sliders absolute-center"></i>,
-      title: "Filters",
+      title: "Price",
+      icon: <i className="fi fi-rr-dollar absolute-center"></i>,
     },
     {
       id: 2,
-      title: "Pro Offers",
-      icon: <i className="fi fi-rr-angle-down absolute-center"></i>,
-    },
-    {
-      id: 3,
-      title: "Distance",
-      icon: <i className="fi fi-rr-apps-sort absolute-center"></i>,
-    },
-    {
-      id: 5,
       title: "Rating: 4.0+",
-    },
-    {
-      id: 4,
-      title: "Pubs & Bars",
     },
   ];
   const collectionList = [

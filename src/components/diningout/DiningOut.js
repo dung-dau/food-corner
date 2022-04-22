@@ -14,41 +14,15 @@ function DiningOut() {
     },
     {
       id: 2,
-      title: "Pro Offers",
-      icon: <i className="fi fi-rr-angle-down absolute-center"></i>,
+      title: "Price",
+      icon: <i className="fi fi-rr-dollar absolute-center"></i>,
     },
     {
       id: 3,
-      title: "Distance",
-      icon: <i className="fi fi-rr-apps-sort absolute-center"></i>,
-    },
-    {
-      id: 5,
-      title: "Online Bookings",
-    },
-    {
-      id: 4,
-      title: "Outdoor Seating",
-    },
-    {
-      id: 6,
       title: "Rating: 4.0+",
     },
     {
-      id: 7,
-      title: "Cuisines",
-      icon: <i className="fi fi-rr-angle-down absolute-center"></i>,
-    },
-    {
-      id: 8,
-      title: "Cafes",
-    },
-    {
-      id: 9,
-      title: "Open Now",
-    },
-    {
-      id: 10,
+      id: 4,
       title: "Safe and Hygienic",
     },
   ];

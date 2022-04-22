@@ -1,4 +1,4 @@
-import { restaurants } from '../../data/Restaurants';
+import { restaurants } from '../../data/restaurants';
 import ExploreSection from '../common/exploreSection/ExploreSection';
 import Filters from '../common/filters/Filters';
 import './delivery.css';
@@ -20,10 +20,6 @@ function Delivery() {
         id: 3,
         title: "Delivery Time",
         icon: <i className="fi fi-rr-apps-sort absolute-center"></i>,
-      },
-      {
-        id: 4,
-        title: "Pro Offers",
       },
   ]
   const restaurantList = restaurants;
