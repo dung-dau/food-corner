@@ -429,7 +429,7 @@ export const diningOut = [
         rating: {
           has_fake_reviews: 0,
           aggregate_rating: "3.9",
-          rating_text: "NEW",
+          rating_text: "4.2",
           rating_subtitle: "Good",
           rating_color: "9ACD32",
           votes: "77",
