@@ -8,30 +8,22 @@ import TopBrands from './topBrands/TopBrands';
 function Delivery() {
   const deliveryFilters = [
       {
-          id: 1,
-          icon: <i className="fi fi-rr-settings-sliders absolute-center"></i>,
-          title: "Filters",
-      },
-      {
-        id: 2,
+        id: 1,
         title: "Rating: 4.0+",
       },
       {
+        id: 2,
+        title: "Price",
+        icon: <i className="fi fi-rr-dollar absolute-center"></i>,
+      },
+      {
         id: 3,
-        title: "Safe and Hygienic",
-      },
-      {
-        id: 4,
-        title: "Pure Veg",
-      },
-      {
-        id: 5,
         title: "Delivery Time",
         icon: <i className="fi fi-rr-apps-sort absolute-center"></i>,
       },
       {
-        id: 6,
-        title: "Great Offers",
+        id: 4,
+        title: "Pro Offers",
       },
   ]
   const restaurantList = restaurants;

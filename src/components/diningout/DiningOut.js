@@ -47,6 +47,10 @@ function DiningOut() {
       id: 9,
       title: "Open Now",
     },
+    {
+      id: 10,
+      title: "Safe and Hygienic",
+    },
   ];
   const collectionList = [
     {

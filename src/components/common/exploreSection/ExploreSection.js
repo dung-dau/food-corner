@@ -9,9 +9,14 @@ function ExploreSection({list, collectionName}) {
     const title = useSelector(selectTitle);
     const activeFilterExists = useSelector(selectActiveFilterExists);
     let filteredList = list;
+    console.log(title);
+
+
     useEffect(() => {
 
-    }, [list,filteredList, title])
+    }, [list, filteredList, title])
+
+
     if(!activeFilterExists) {
         filteredList = list.sort((a,b) => (
             a.info.name.localeCompare(b.info.name)
@@ -24,13 +29,12 @@ function ExploreSection({list, collectionName}) {
             b.info.rating.rating_text - a.info.rating.rating_text
         )).sort((a,b) => {
             if (a.info.rating.rating_text.localeCompare(b.info.rating.rating_text) === 0) {
-                 return a.info.name.localeCompare(b.info.name)
+                return a.info.name.localeCompare(b.info.name)
             }
             return 0;
         });
     }
     if(title === "Delivery Time") {
-        console.log("filtering by delivery time...");
         filteredList = filteredList.sort((a,b) => {
             return a.order.deliveryTime.localeCompare(b.order.deliveryTime);
         }).sort((a,b) => {
@@ -40,7 +44,18 @@ function ExploreSection({list, collectionName}) {
             return 0;
         })
     }
-    console.log(title);
+
+    if(title === "Safe and Hygienic") {
+        filteredList = filteredList.filter((restaurant) => (
+            restaurant.bottomContainers.length !== 0
+        ))
+    }
+
+    if(title === "Price") {
+        filteredList = filteredList.sort((a, b) => (
+            a.info.cfo.text.localeCompare(b.info.cfo.text)
+        ));
+    }
   
   return (
     <div className='max-width explore-section'>

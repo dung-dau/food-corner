@@ -30,7 +30,7 @@ function Collection({list}) {
             </div>
             <Slider {...settings}>
                 {list.map((item) => (
-                    <div>
+                    <div key={item.id}>
                         <div className='collection-cover'>
                             <img className='collection-image' 
                                  src={item.cover} 
