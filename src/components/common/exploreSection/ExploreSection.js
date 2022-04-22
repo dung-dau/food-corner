@@ -29,6 +29,18 @@ function ExploreSection({list, collectionName}) {
             return 0;
         });
     }
+    if(title === "Delivery Time") {
+        console.log("filtering by delivery time...");
+        filteredList = filteredList.sort((a,b) => {
+            return a.order.deliveryTime.localeCompare(b.order.deliveryTime);
+        }).sort((a,b) => {
+            if (a.order.deliveryTime.localeCompare(b.order.deliveryTime) === 0) {
+                 return a.info.name.localeCompare(b.info.name)
+            }
+            return 0;
+        })
+    }
+    console.log(title);
   
   return (
     <div className='max-width explore-section'>
