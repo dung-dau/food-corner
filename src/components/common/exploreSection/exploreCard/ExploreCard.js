@@ -21,6 +21,7 @@ const ExploreCard = ({ restaurant, i }) => {
       : offers.length === 1
       ? offers[0].text
       : null;
+  let index = 0;
 
   return (
     <div className={`explore-card cur-po ${i < 3 ? "explore-card-first" : ""}`}>
@@ -46,12 +47,15 @@ const ExploreCard = ({ restaurant, i }) => {
       <div className="res-row">
         {cuisines.length && (
           <div className="res-cuisine">
-            {cuisines.map((item, i) => (
-              <span className="res-cuisine-tag">
-                {item}
-                {i !== cuisines.length - 1 && ","}
-              </span>
-            ))}
+            {cuisines.map((item, i) => {
+              index = index + 1
+              return (
+                <span className="res-cuisine-tag" key={index}>
+                  {item}
+                  {i !== cuisines.length - 1 && ","}
+                </span>
+              )
+            })}
           </div>
         )}
         {approxPrice && <div className="res-price">{approxPrice}</div>}

@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { restaurants } from '../../data/Restaurants';
 import ExploreSection from '../common/exploreSection/ExploreSection';
 import Filters from '../common/filters/Filters';
@@ -7,11 +6,10 @@ import DeliveryCollections from './deliveryCollections/DeliveryCollections';
 import TopBrands from './topBrands/TopBrands';
 
 function Delivery() {
-  let [activeFilter, setActiveFilter] = useState("");
   const deliveryFilters = [
       {
           id: 1,
-          icon: <i class="fi fi-rr-settings-sliders absolute-center"></i>,
+          icon: <i className="fi fi-rr-settings-sliders absolute-center"></i>,
           title: "Filters",
       },
       {
@@ -40,10 +38,7 @@ function Delivery() {
   return (
     <div>
         <div className='max-width'>
-            <Filters filterList={deliveryFilters} 
-                     activeFilter={activeFilter} 
-                     setActiveFilter={setActiveFilter}
-            />
+            <Filters filterList={deliveryFilters} />
         </div>
         <DeliveryCollections />
         <TopBrands />

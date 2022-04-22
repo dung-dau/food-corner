@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import PrevArrow from "../../common/carousel/PrevArrow";
 import NextArrow from "../../common/carousel/NextArrow";
 
-const DeliveryColletions = () => {
+const DeliveryCollections = () => {
   const deliveryItems = [
     {
       id: 1,
@@ -88,7 +88,7 @@ const DeliveryColletions = () => {
         <div className="collection-title">Eat what makes you happy</div>
         <Slider {...settings}>
           {deliveryItems.map((item) => {
-            return <DeliveryItem item={item} />;
+            return <DeliveryItem item={item} key={item.id} />;
           })}
         </Slider>
       </div>
@@ -96,4 +96,4 @@ const DeliveryColletions = () => {
   );
 };
 
-export default DeliveryColletions;
+export default DeliveryCollections;

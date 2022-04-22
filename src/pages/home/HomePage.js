@@ -11,7 +11,7 @@ function HomePage() {
   return (
     <div>
       <Header/>
-      <TabOptions activeTab={activeTab} setActiveTab={setActiveTab}/>
+      <TabOptions activeTab={activeTab} setActiveTab={setActiveTab} />
       {/* unique screen */}
       {getCorrectScreen(activeTab)}
     </div>
@@ -25,9 +25,9 @@ const getCorrectScreen = (tab) => {
     case "Dining Out":
       return <DiningOut />
     case "Nightlife":
-      return <NightLife/>
+      return <NightLife />
     default:
-      return <Delivery/>
+      return <Delivery />
   }
 }
 

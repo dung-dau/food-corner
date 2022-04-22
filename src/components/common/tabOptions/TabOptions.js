@@ -29,6 +29,7 @@ function TabOptions({activeTab, setActiveTab}) {
                 return (
                     <div onClick={() =>setActiveTab(tab.name)}
                          className={`tab-item absolute-center cur-po ${activeTab === tab.name && "active-tab"}`}
+                         key={tab.id}
                     >
                         <div className='tab-image-container absolute-center'
                              style={{backgroundColor: `${activeTab === tab.name?tab.backDrop : ""}`}}
