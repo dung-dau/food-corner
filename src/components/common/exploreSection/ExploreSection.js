@@ -13,14 +13,21 @@ function ExploreSection({list, collectionName}) {
 
     }, [list,filteredList, title])
     if(!activeFilterExists) {
-        filteredList = list;
+        filteredList = list.sort((a,b) => (
+            a.info.name.localeCompare(b.info.name)
+        ));
     }
     if(title === "Rating: 4.0+") {
         filteredList = filteredList.filter((restaurant) => {
             return restaurant.info.rating.rating_text >= "4.0"
         }).sort((a,b) => (
             b.info.rating.rating_text - a.info.rating.rating_text
-        ));
+        )).sort((a,b) => {
+            if (a.info.rating.rating_text.localeCompare(b.info.rating.rating_text) === 0) {
+                 return a.info.name.localeCompare(b.info.name)
+            }
+            return 0;
+        });
     }
   
   return (
