@@ -18,7 +18,9 @@ function ExploreSection({list, collectionName}) {
     if(title === "Rating: 4.0+") {
         filteredList = filteredList.filter((restaurant) => {
             return restaurant.info.rating.rating_text >= "4.0"
-        });
+        }).sort((a,b) => (
+            b.info.rating.rating_text - a.info.rating.rating_text
+        ));
     }
   
   return (
