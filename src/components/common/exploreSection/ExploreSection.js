@@ -3,23 +3,38 @@ import ExploreCard from './exploreCard/ExploreCard';
 import './exploreSection.css';
 import { useSelector } from 'react-redux';
 import { selectActiveFilterExists, selectTitle } from '../../../redux/filter';
+import search, { selectName } from '../../../redux/search';
 
 
 function ExploreSection({list, collectionName}) {
     const title = useSelector(selectTitle);
     const activeFilterExists = useSelector(selectActiveFilterExists);
     let filteredList = list;
+    let listNames = list.map((listItem) => {
+        return listItem.info.name.toLowerCase();
+    });
+    const searchedName = useSelector(selectName);
 
     useEffect(() => {
 
     }, [list, filteredList, title])
-
 
     if(!activeFilterExists) {
         filteredList = list.sort((a,b) => (
             a.info.name.localeCompare(b.info.name)
         ));
     }
+
+    if(listNames.includes(searchedName.toLowerCase())) {
+        filteredList = filteredList.filter((restaurant) => (
+            restaurant.info.name.toLowerCase() === searchedName.toLowerCase()
+        ))
+    }
+
+    if(searchedName !== "" && !listNames.includes(searchedName.toLowerCase())) {
+        filteredList = [];
+    }
+
     if(title === "Rating: 4.0+") {
         filteredList = filteredList.filter((restaurant) => {
             return restaurant.info.rating.rating_text >= "4.0"
