@@ -10,11 +10,6 @@ Run the following commands: <br/><br/>
 Unless a port is specified or if port 3000 is already being used by another applcation, <br />
 the website will be available at http://localhost:3000/
 
-## Known Issues
-Clicking "Starred" immediately after starring/unstarring 1 or more emails will cause the page to be unresponsive for about 
-30-60 seconds due to the fact that the code for updating data in the Firebase Firestore database is being run followed by 
-a rerendering of the email list.
-
 ## License
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
